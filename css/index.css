@@ -3,3 +3,18 @@
     display: block;
     text-align: center;
 }
+.search{
+    width:  300px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.search label{
+    margin-top: 20px;
+}
+.start-search{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+
+}
