@@ -74,3 +74,9 @@ function getYear() {
         }
     });
 }
+
+function submit_table() {
+    var class_code = $("#select-class").val();
+    var semester = $("#select-semester").val();
+    window.location.href = "timetable.php?classcode="+class_code+"&semester="+semester;
+}

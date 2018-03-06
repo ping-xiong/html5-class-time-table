@@ -113,7 +113,7 @@
         <select id="select-semester" data-am-selected="{btnWidth: '100%', searchBox: 1, maxHeight: 200}">
 
         </select>
-        <button type="button" class="am-btn am-btn-primary start-search">查询</button>
+        <button type="button" class="am-btn am-btn-primary start-search" onclick="submit_table()">查询</button>
     </div>
 </main>
 
