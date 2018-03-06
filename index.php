@@ -96,21 +96,21 @@
     <div class="am-panel-bd">
         <div class="am-g am-g-collapse">
             <div class="am-u-sm-3 am-u-md-3">
-                <label for="select-year">选择学年</label><br>
-                <select id="select-year" data-am-selected="{btnWidth: '100%'}" onchange="getClass()">
+                <label for="select-year">班级学年</label><br>
+                <select id="select-year" data-am-selected="{btnWidth: '100%', maxHeight: 200}" onchange="getClass()">
 
                 </select>
             </div>
             <div class="am-u-sm-8 am-u-md-8">
                 <label for="select-class">选择班级</label><br>
-                <select id="select-class" data-am-selected="{btnWidth: '100%', searchBox: 1}">
+                <select id="select-class" data-am-selected="{btnWidth: '100%', searchBox: 1, maxHeight: 200}">
 
                 </select>
             </div>
         </div>
         <br>
         <label for="select-semester">选择学期</label><br>
-        <select id="select-semester" data-am-selected="{btnWidth: '100%', searchBox: 1}">
+        <select id="select-semester" data-am-selected="{btnWidth: '100%', searchBox: 1, maxHeight: 200}">
 
         </select>
         <button type="button" class="am-btn am-btn-primary start-search">查询</button>
@@ -119,9 +119,11 @@
 
 <!--存放历史记录-->
 <div class="am-panel am-panel-warning history">
+    <div class="am-panel-hd" style="text-align: center">
+        搜索历史
+    </div>
     <div class="am-panel-bd">
-        查询历史：软件G141 & 17-18-2 戳我直达课程表
-        <a href="" class="am-close am-close-alt am-close-spin am-icon-times" style="float: right;"></a>
+        <a class="am-badge am-badge-warning am-radius am-text-sm">软件G141#17-18-2</a>
     </div>
 </div>
 
