@@ -18,18 +18,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             case 'getClass':
                 include_once "get.php";
                 $get = new get($db);
-                $get->get_class();
-                break;
-            case 'getSemester':
-                include_once "get.php";
                 $grade = null;
-                if (isset($_POST['grade'])){
+                if (isset($_POST['grade']) && $_POST['grade']!= "" && $_POST['grade'] != null){
                     $grade = $db->test_input($_POST['grade']);
                 }else{
                     $grade = 2017;
                 }
-                $get = new get($db);
                 $get->get_class_by_grade($grade);
+                break;
+            case 'getSemester':
+                include_once "get.php";
+                $get = new get($db);
+                $get->get_Semester();
+                break;
+            case 'getYear':
+                include_once "get.php";
+                $get = new get($db);
+                $get->get_year();
                 break;
         }
     }else{

@@ -77,9 +77,13 @@
 
             <a class="offcanvas-a" href="https://pingxonline.com/app/transcript/">成绩查询</a>
 
+            <a class="offcanvas-a" href="help.html">使用帮助</a>
+
             <a class="offcanvas-a" href="history.html">更新历史</a>
 
             <a class="offcanvas-a" href="about.html">关于本站</a>
+
+            <a class="offcanvas-a" href="index_old.html">返回旧版</a>
         </div>
     </div>
 </div>
@@ -90,10 +94,20 @@
         开始查询
     </div>
     <div class="am-panel-bd">
-        <label for="select-class">选择班级</label><br>
-        <select id="select-class" data-am-selected="{btnWidth: '100%', searchBox: 1}">
+        <div class="am-g am-g-collapse">
+            <div class="am-u-sm-3 am-u-md-3">
+                <label for="select-year">选择学年</label><br>
+                <select id="select-year" data-am-selected="{btnWidth: '100%'}" onchange="getClass()">
 
-        </select>
+                </select>
+            </div>
+            <div class="am-u-sm-8 am-u-md-8">
+                <label for="select-class">选择班级</label><br>
+                <select id="select-class" data-am-selected="{btnWidth: '100%', searchBox: 1}">
+
+                </select>
+            </div>
+        </div>
         <br>
         <label for="select-semester">选择学期</label><br>
         <select id="select-semester" data-am-selected="{btnWidth: '100%', searchBox: 1}">
@@ -102,6 +116,28 @@
         <button type="button" class="am-btn am-btn-primary start-search">查询</button>
     </div>
 </main>
+
+<!--存放历史记录-->
+<div class="am-panel am-panel-warning history">
+    <div class="am-panel-bd">
+        查询历史：软件G141 & 17-18-2 戳我直达课程表
+        <a href="" class="am-close am-close-alt am-close-spin am-icon-times" style="float: right;"></a>
+    </div>
+</div>
+
+<footer data-am-widget="footer"
+        class="am-footer am-footer-default"
+        data-am-footer="{  }">
+    <div class="am-footer-miscs ">
+
+        <p>由 <a href="https://pingxonline.com/" title="梁嘉平"
+                target="_blank" class="">国教院@梁嘉平</a>
+            提供技术支持</p>
+
+        <p><a href="help.html">使用帮助</a></p>
+    </div>
+</footer>
+
 
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="js/jquery-3.2.1.min.js"></script>

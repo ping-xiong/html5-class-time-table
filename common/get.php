@@ -40,7 +40,7 @@ class get
 
     //获取所有学年
     public function get_year(){
-        $sql = "SELECT `grade` FROM `gxust_class` WHERE 1 GROUP BY `grade`";
+        $sql = "SELECT `grade` FROM `gxust_class` WHERE 1 GROUP BY `grade` DESC ";
         $result = mysqli_query($this->link, $sql);
         $arr = array();
         while ($row = mysqli_fetch_assoc($result)){

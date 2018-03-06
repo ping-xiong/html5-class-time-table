@@ -3,11 +3,19 @@
     display: block;
     text-align: center;
 }
-.search{
+.search, .history{
     max-width: 600px;
     margin: 0 auto;
     margin-top: 20px;
 }
+
+@media screen and (max-width: 600px) {
+    .search, .history{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
 .search label{
     margin-top: 20px;
 }
