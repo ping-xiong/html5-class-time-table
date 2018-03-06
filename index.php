@@ -92,24 +92,12 @@
     <div class="am-panel-bd">
         <label for="select-class">选择班级</label><br>
         <select id="select-class" data-am-selected="{btnWidth: '100%', searchBox: 1}">
-            <option value="a">Apple</option>
-            <option value="b">Banana</option>
-            <option value="o">Orange</option>
-            <option value="m">Mango</option>
-            <option value="phone">iPhone</option>
-            <option value="im">iMac</option>
-            <option value="mbp">Macbook Pro</option>
+
         </select>
         <br>
         <label for="select-semester">选择学期</label><br>
         <select id="select-semester" data-am-selected="{btnWidth: '100%', searchBox: 1}">
-            <option value="a">Apple</option>
-            <option value="b">Banana</option>
-            <option value="o">Orange</option>
-            <option value="m">Mango</option>
-            <option value="phone">iPhone</option>
-            <option value="im">iMac</option>
-            <option value="mbp">Macbook Pro</option>
+
         </select>
         <button type="button" class="am-btn am-btn-primary start-search">查询</button>
     </div>
@@ -124,5 +112,6 @@
 <script src="Amaze%20UI/assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
 <script src="Amaze%20UI/assets/js/amazeui.min.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
