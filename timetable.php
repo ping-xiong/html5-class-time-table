@@ -41,8 +41,8 @@ if ($note_address == null){
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="广西科技大学课程表">
+    <meta name="keywords" content="课程表助手">
     <meta name="viewport"
           content="width=device-width, initial-scale=1">
     <title>广西科技大学课程表</title>
@@ -72,6 +72,7 @@ if ($note_address == null){
     <link rel="stylesheet" href="Amaze%20UI/assets/css/amazeui.min.css">
     <link rel="stylesheet" href="Amaze%20UI/assets/css/app.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/timetable.css">
 </head>
 <body>
 <header data-am-widget="header"
@@ -85,7 +86,7 @@ if ($note_address == null){
 
     <h1 class="am-header-title">
         <a href="#title-link" class="">
-            广科大课程表
+            广科大课程表<a style="color: #e3e3e3; font-size: 11px; margin-left: 6px;" href="https://gitee.com/LiangJiaping/html5_curriculum">v0.5 公测版</a>
         </a>
     </h1>
 
@@ -118,7 +119,8 @@ if ($note_address == null){
 
 
 <div class="am-scrollable-horizontal">
-    <table class="am-table am-table-bordered am-table-striped am-text-nowrap am-table-compact">
+<!--    am-text-nowrap-->
+    <table class="am-table am-table-bordered am-table-striped am-text-nowrap am-table-compact timetable">
         <tr>
             <th></th>
             <th>星期一</th>
@@ -130,8 +132,19 @@ if ($note_address == null){
             <th>星期日</th>
         </tr>
         <?php
+        $time_table_arr = array();
         $count = 1;
         while ($row = mysqli_fetch_assoc($arr_address)){
+
+            $time_table_sub_arr = array();
+            $time_table_sub_arr["one"] = $row["one"];
+            $time_table_sub_arr["two"] = $row["two"];
+            $time_table_sub_arr["three"] = $row["three"];
+            $time_table_sub_arr["four"] = $row["four"];
+            $time_table_sub_arr["five"] = $row["five"];
+            $time_table_sub_arr["six"] = $row["six"];
+            $time_table_sub_arr["seven"] = $row["seven"];
+            $time_table_arr[$count] = $time_table_sub_arr;
 
             $section = $row["section"];
             $one = $row["one"];
@@ -142,8 +155,30 @@ if ($note_address == null){
             $six = $row["six"];
             $seven = $row["seven"];
 
+            if ($one == "none\n"){
+                $one = "&#12288;";
+            }
+            if ($two == "none\n"){
+                $two = "&#12288;";
+            }
+            if ($three == "none\n"){
+                $three = "&#12288;";
+            }
+            if ($four == "none\n"){
+                $four = "&#12288;";
+            }
+            if ($five == "none\n"){
+                $five = "&#12288;";
+            }
+            if ($six == "none\n"){
+                $six = "&#12288;";
+            }
+            if ($seven == "none\n"){
+                $seven = "&#12288;";
+            }
+
             echo "<tr>";
-            echo "<td>".$count."</td>";
+            echo "<td class='floating-td'>".$count."</td>";
             echo "<td>".$one."</td>";
             echo "<td>".$two."</td>";
             echo "<td>".$three."</td>";
@@ -155,6 +190,16 @@ if ($note_address == null){
             $count++;
             if ($count > 13){
                 break;
+            }
+        }
+
+
+//        组装，合并连续课程
+        $col = 7;
+        $row = 13;
+        for ($i=0;$i<count($time_table_arr);$i++){
+            for ($y=0;$y<$col;$y++){
+
             }
         }
 
@@ -181,13 +226,35 @@ HTML;
 }
 ?>
 
-
+<p style="text-align: center; color: #535353;">蹭课助手开发中，敬请期待...</p>
 
 <footer data-am-widget="footer"
         class="am-footer am-footer-default"
         data-am-footer="{  }">
-    <div class="am-footer-miscs ">
 
+    <div class="am-footer-switch" style="width: 332px;margin: 0 auto;overflow: hidden;">
+        <!-- JiaThis Button BEGIN -->
+        <div class="jiathis_style">
+            <span class="jiathis_txt">分享到：</span>
+            <a class="jiathis_button_qzone">QQ空间</a>
+            <a class="jiathis_button_cqq">QQ好友</a>
+            <a class="jiathis_button_weixin">微信</a>
+            <a class="jiathis_button_copy">复制网址</a>
+        </div>
+        <script type="text/javascript" >
+            var jiathis_config={
+                shortUrl:false,
+                hideMore:true,
+                url:window.location.href,
+                title:"课程表",
+                summary:"广西科技大学新版课程表助手"
+            }
+        </script>
+        <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+        <!-- JiaThis Button END -->
+    </div>
+    <br>
+    <div class="am-footer-miscs ">
         <p>由 <a href="https://pingxonline.com/" title="梁嘉平"
                 target="_blank" class="">国教院@梁嘉平</a>
             提供技术支持</p>

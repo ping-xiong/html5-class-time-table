@@ -1,0 +1,10 @@
+.floating-td{
+    /*position: absolute;*/
+}
+
+.timetable tr:nth-child(6) td{
+    border-bottom: 2px solid #a4a4a4;
+}
+.timetable tr:nth-child(11) td{
+    border-bottom: 2px solid #a4a4a4;
+}

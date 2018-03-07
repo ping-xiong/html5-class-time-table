@@ -13,8 +13,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="广西科技大学课程表">
+    <meta name="keywords" content="课程表助手">
     <meta name="viewport"
           content="width=device-width, initial-scale=1">
     <title>广西科技大学课程表</title>
@@ -57,7 +57,7 @@
 
     <h1 class="am-header-title">
         <a href="#title-link" class="">
-            广科大课程表
+            广科大课程表<a style="color: #e3e3e3; font-size: 11px; margin-left: 6px;" href="https://gitee.com/LiangJiaping/html5_curriculum">v0.5 公测版</a>
         </a>
     </h1>
 
@@ -90,8 +90,8 @@
 
 <!--在这里编写你的代码-->
 <main class="search am-panel am-panel-secondary">
-    <div class="am-panel-hd" style="text-align: center">
-        开始查询
+    <div class="am-panel-hd" style="text-align: center;position: relative;">
+        班级课表
     </div>
     <div class="am-panel-bd">
         <div class="am-g am-g-collapse">
@@ -110,7 +110,7 @@
         </div>
         <br>
         <label for="select-semester">选择学期</label><br>
-        <select id="select-semester" data-am-selected="{btnWidth: '100%', searchBox: 1, maxHeight: 200}">
+        <select id="select-semester" data-am-selected="{btnWidth: '100%', maxHeight: 200}">
 
         </select>
         <button type="button" class="am-btn am-btn-primary start-search" onclick="submit_table()">查询</button>
@@ -152,5 +152,10 @@
 <![endif]-->
 <script src="Amaze%20UI/assets/js/amazeui.min.js"></script>
 <script src="js/index.js"></script>
+
+<div style="display: none;">
+    <script src="https://s4.cnzz.com/z_stat.php?id=1258160053&web_id=1258160053" language="JavaScript"></script>
+</div>
+
 </body>
 </html>
