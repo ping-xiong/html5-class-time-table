@@ -121,9 +121,10 @@
 <div class="am-panel am-panel-warning history">
     <div class="am-panel-hd" style="text-align: center">
         搜索历史
+        <button type="button" class="am-close" style="float: right" onclick="store.remove('timetable');$('.history').hide(300);">&times;</button>
     </div>
-    <div class="am-panel-bd">
-        <a class="am-badge am-badge-warning am-radius am-text-sm">软件G141#17-18-2</a>
+    <div class="am-panel-bd history-list">
+<!--        <a href="timetable.php" class="am-badge am-badge-warning am-radius am-text-sm">软件G141#17-18-2</a>-->
     </div>
 </div>
 

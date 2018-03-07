@@ -2,6 +2,24 @@ getYear();
 
 var new_year;
 
+// 开启本地存储
+var store = $.AMUI.store;
+
+if (!store.enabled) {
+    $(".history").hide();
+}else{
+    var data = store.get('timetable');
+    console.log(data);
+    if(data == null){
+        data = [];
+        $(".history").hide();
+    }
+    $(".history-list").html("");
+    for(var i=0; i < data.length; i++){
+        $("<a>").attr("href", "timetable.php?classcode="+data[i].classcode+"&semester="+data[i].semester).addClass("am-badge am-badge-warning am-radius am-text-sm").text(data[i].classname+"#"+data[i].semester).appendTo(".history-list");
+    }
+}
+
 function getClass() {
     var grade = $("#select-year").val();
     if(grade == null){
@@ -77,6 +95,30 @@ function getYear() {
 
 function submit_table() {
     var class_code = $("#select-class").val();
+    var class_name = $("[value='"+class_code+"']").text();
     var semester = $("#select-semester").val();
+
+
+    if (!store.enabled) {
+
+    }else{
+        var data = store.get('timetable');
+        if(data == null){
+            data = [];
+        }
+        var obj = { classcode: class_code, semester: semester, classname:class_name };
+        var canBeAdded = 0;
+        for(var i=0; i < data.length; i++){
+            if(class_code === data[i].classcode && semester === data[i].semester){
+                canBeAdded = 1;
+            }
+        }
+        if(canBeAdded === 0){
+            data.push(obj);
+            store.set("timetable", data);
+        }
+
+    }
     window.location.href = "timetable.php?classcode="+class_code+"&semester="+semester;
 }
+
