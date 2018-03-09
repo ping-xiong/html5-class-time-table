@@ -9,24 +9,27 @@
 include_once  "common/connect.php";
 $db = new connectDataBase();
 
+// 检测是否存在url参数
 if (isset($_GET['semester']) && isset($_GET["classcode"])){
 
 }else{
     header("Location: index.php");
 }
 
+// 获取url参数
 $classcode = $db->test_input($_GET['classcode']);
 $semester = $db->test_input($_GET['semester']);
-
+// 获取课程表
 $mysql = "SELECT * FROM `gxust_timetable` WHERE classCode = '{$classcode}' AND semester = '{$semester}'";
 $arr_address = mysqli_query($db->link, $mysql);
-
+// 获取备注
 $mysql = "SELECT note FROM `gxust_timetablenote` WHERE classCode = '{$classcode}' AND semester = '{$semester}'";
 $note_address = mysqli_query($db->link, $mysql);
 $note_address_arr = null;
 if ($note_address == null){
 
 }else{
+    // 根据字符'//'分割备注字符串
     while ($row = mysqli_fetch_assoc($note_address)){
         $note = $row["note"];
         $note_address_arr = explode("//", $note);
@@ -86,7 +89,7 @@ if ($note_address == null){
 
     <h1 class="am-header-title">
         <a href="#title-link" class="">
-            广科大课程表<a style="color: #e3e3e3; font-size: 11px; margin-left: 6px;" href="https://gitee.com/LiangJiaping/html5_curriculum">v0.5 公测版</a>
+            广科大课程表<a style="color: #e3e3e3; font-size: 11px; margin-left: 2px;" href="https://gitee.com/LiangJiaping/html5_curriculum">v0.5 公测版</a>
         </a>
     </h1>
 
@@ -131,7 +134,9 @@ if ($note_address == null){
             <th>星期六</th>
             <th>星期日</th>
         </tr>
+
         <?php
+        // 遍历输出课程表
         $time_table_arr = array();
         $count = 1;
         while ($row = mysqli_fetch_assoc($arr_address)){
@@ -233,25 +238,7 @@ HTML;
         data-am-footer="{  }">
 
     <div class="am-footer-switch" style="width: 332px;margin: 0 auto;overflow: hidden;">
-        <!-- JiaThis Button BEGIN -->
-        <div class="jiathis_style">
-            <span class="jiathis_txt">分享到：</span>
-            <a class="jiathis_button_qzone">QQ空间</a>
-            <a class="jiathis_button_cqq">QQ好友</a>
-            <a class="jiathis_button_weixin">微信</a>
-            <a class="jiathis_button_copy">复制网址</a>
-        </div>
-        <script type="text/javascript" >
-            var jiathis_config={
-                shortUrl:false,
-                hideMore:true,
-                url:window.location.href,
-                title:"课程表",
-                summary:"广西科技大学新版课程表助手"
-            }
-        </script>
-        <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
-        <!-- JiaThis Button END -->
+
     </div>
     <br>
     <div class="am-footer-miscs ">

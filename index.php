@@ -57,7 +57,7 @@
 
     <h1 class="am-header-title">
         <a href="#title-link" class="">
-            广科大课程表<a style="color: #e3e3e3; font-size: 11px; margin-left: 6px;" href="https://gitee.com/LiangJiaping/html5_curriculum">v0.5 公测版</a>
+            广科大课程表<a style="color: #e3e3e3; font-size: 11px; margin-left: 2px;" href="https://gitee.com/LiangJiaping/html5_curriculum">v0.5 公测版</a>
         </a>
     </h1>
 
