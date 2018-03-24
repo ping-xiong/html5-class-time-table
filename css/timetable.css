@@ -8,3 +8,23 @@
 .timetable tr:nth-child(11) td{
     border-bottom: 2px solid #a4a4a4;
 }
+
+.canvas-class{
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.total-rank{
+    max-width: 600px;
+    width: 100%;
+}
+
+.padding-top-bottom{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.underline{
+    text-decoration-line: underline;
+}

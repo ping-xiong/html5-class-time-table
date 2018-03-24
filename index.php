@@ -6,6 +6,8 @@
  * Time: 17:43
  */
 
+$version = 0.6;
+
 ?>
 
 <!doctype html>
@@ -43,7 +45,7 @@
 
     <link rel="stylesheet" href="Amaze%20UI/assets/css/amazeui.min.css">
     <link rel="stylesheet" href="Amaze%20UI/assets/css/app.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css<?php echo "?v=".$version;?>">
 </head>
 <body>
 <header data-am-widget="header"
@@ -57,7 +59,7 @@
 
     <h1 class="am-header-title">
         <a href="#title-link" class="">
-            广科大课程表<a style="color: #e3e3e3; font-size: 11px; margin-left: 2px;" href="https://gitee.com/LiangJiaping/html5_curriculum">v0.5 公测版</a>
+            广科大课程表<a style="color: #e3e3e3; font-size: 11px; margin-left: 2px;" href="https://gitee.com/LiangJiaping/html5_curriculum"><?php echo "v".$version;?> 公测版</a>
         </a>
     </h1>
 
@@ -151,7 +153,7 @@
 <script src="Amaze%20UI/assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
 <script src="Amaze%20UI/assets/js/amazeui.min.js"></script>
-<script src="js/index.js"></script>
+<script src="js/index.js<?php echo "?v=".$version;?>"></script>
 
 <div style="display: none;">
     <script src="https://s4.cnzz.com/z_stat.php?id=1258160053&web_id=1258160053" language="JavaScript"></script>
