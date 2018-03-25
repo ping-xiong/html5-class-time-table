@@ -6,6 +6,8 @@
  * Time: 8:30
  */
 
+ini_set('date.timezone','Asia/Shanghai');
+
 class get
 {
     private $link;
