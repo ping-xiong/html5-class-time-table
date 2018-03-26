@@ -39,7 +39,7 @@ if ($note_address == null){
 }
 
 // 版本号
-$version = 0.6;
+$version = 0.61;
 
 ?>
 
@@ -254,7 +254,7 @@ HTML;
 
 <p style="text-align: center; color: #535353;">蹭课助手开发中，敬请期待...</p>
 
-<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">喜欢我的网站？请支持网站发展，分享给朋友：</a><br/><br/><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">QQ好友</a></div>
+<div class="bdsharebuttonbox" style="text-align: center;max-width: 330px;margin: 0 auto;"><a href="#" class="bds_more" data-cmd="more">喜欢我的网站？请支持网站发展，分享给朋友：</a><br/><br/><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">QQ好友</a></div>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"广科大班级课表-全方位的查课助手","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
@@ -299,6 +299,13 @@ HTML;
     <div class="am-panel-hd">今日课程数量排行榜</div>
     <div class="am-panel-bd">
         <ul class="am-list total-rank">
+            <li>
+                <div class="am-g padding-top-bottom" style="background: #f1f1f1;">
+                    <div class="am-u-sm-3">排名</div>
+                    <div class="am-u-sm-6">班级</div>
+                    <div class="am-u-sm-3">课数</div>
+                </div>
+            </li>
             {{each}}
 
             <li>

@@ -19,8 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         switch ($api){
             case 'getClass':
 //                根据年份获取班级列表
-
-
                 $grade = null;
                 if (isset($_POST['grade']) && $_POST['grade']!= "" && $_POST['grade'] != null){
                     $grade = $db->test_input($_POST['grade']);

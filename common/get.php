@@ -122,7 +122,17 @@ class get
     // 获取全校的排课排名
     public function get_have_most_class(){
         // 获取星期一课程数排名
-        $sql = "SELECT `classCode`,COUNT(`one`) as total FROM `gxust_timetable` WHERE `semester` = \"17-18-2\" AND (`one` <> 'none\n') GROUP BY `classCode` ORDER BY total DESC";
+
+
+//        SELECT SUM(day1.total+day2.total+day3.total+day4.total+day5.total+day6.total+day7.total) AS final FROM
+//(SELECT `classCode`,COUNT(`one`) as total FROM `gxust_timetable` WHERE `semester` = "17-18-2"  AND (`one` <> 'none\n')  GROUP BY `classCode`) AS day1,
+//(SELECT `classCode`,COUNT(`two`) as total FROM `gxust_timetable` WHERE `semester` = "17-18-2"  AND (`two` <> 'none\n')  GROUP BY `classCode`) AS day2 ,
+//(SELECT `classCode`,COUNT(`three`) as total FROM `gxust_timetable` WHERE `semester` = "17-18-2"  AND (`three` <> 'none\n')  GROUP BY `classCode`) AS day3,
+//(SELECT `classCode`,COUNT(`four`) as total FROM `gxust_timetable` WHERE `semester` = "17-18-2"  AND (`four` <> 'none\n')  GROUP BY `classCode`) AS day4 ,
+//(SELECT `classCode`,COUNT(`five`) as total FROM `gxust_timetable` WHERE `semester` = "17-18-2"  AND (`five` <> 'none\n')  GROUP BY `classCode`) AS day5,
+//(SELECT `classCode`,COUNT(`six`) as total FROM `gxust_timetable` WHERE `semester` = "17-18-2"  AND (`six` <> 'none\n')  GROUP BY `classCode`) AS day6,
+//(SELECT `classCode`,COUNT(`seven`) as total FROM `gxust_timetable` WHERE `semester` = "17-18-2"  AND (`seven` <> 'none\n')  GROUP BY `classCode`) AS day7
+//GROUP BY day1.`classCode` ORDER BY final DESC
 
     }
 
