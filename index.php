@@ -6,7 +6,7 @@
  * Time: 17:43
  */
 
-$version = 0.61;
+$version = 0.62;
 
 ?>
 

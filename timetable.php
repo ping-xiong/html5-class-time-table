@@ -39,7 +39,7 @@ if ($note_address == null){
 }
 
 // 版本号
-$version = 0.61;
+$version = 0.62;
 
 ?>
 
@@ -215,6 +215,12 @@ $version = 0.61;
         ?>
     </table>
 </div>
+
+<a class="am-btn am-btn-primary" href="download.php?<?php echo "classcode={$classcode}&semester={$semester}" ?>" style="display: block;width: 180px;margin: 0 auto;margin-top: 10px;">
+    下载EXCEL表格版
+    <i class="am-icon-cloud-download"></i>
+</a>
+
 <p style="text-align: center; color: #535353;">向下滑动,查看更多信息...</p>
 <!--输出备注-->
 <?php
