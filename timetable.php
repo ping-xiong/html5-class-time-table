@@ -76,7 +76,7 @@ $version = 0.62;
     <meta name="msapplication-TileImage" content="Amaze%20UI/assets/i/app-icon72x72@2x.png">
     <meta name="msapplication-TileColor" content="#0e90d2">
 
-    <link rel="stylesheet" href="Amaze%20UI/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/amazeui/2.7.2/css/amazeui.min.css">
     <link rel="stylesheet" href="Amaze%20UI/assets/css/app.css">
     <link rel="stylesheet" href="css/index.css<?php echo "?v=".$version;?>">
     <link rel="stylesheet" href="css/timetable.css<?php echo "?v=".$version;?>">
@@ -283,17 +283,17 @@ HTML;
 
 
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 <!--<![endif]-->
 <!--[if lte IE 8 ]>
 <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="Amaze%20UI/assets/js/amazeui.ie8polyfill.min.js"></script>
+<script src="https://cdn.staticfile.org/amazeui/2.7.2/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
-<script src="Amaze%20UI/assets/js/amazeui.min.js"></script>
+<script src="https://cdn.staticfile.org/amazeui/2.7.2/js/amazeui.min.js"></script>
 
 <!--绘图插件-->
-<script src="js/Chart.min.js"></script>
+<script src="https://cdn.staticfile.org/Chart.js/2.7.2/Chart.min.js"></script>
 <!--模板引擎-->
 <script src="js/template-web.js"></script>
 

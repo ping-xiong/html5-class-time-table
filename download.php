@@ -59,7 +59,7 @@ $sheet->fromArray(
 $count = 2;
 $col = 2;
 while ($row = mysqli_fetch_assoc($arr_address)) {
-    if ($count == 7 || $count == 12){
+    if ($count == 7 || $count == 13){
         $count+=1;
     }
     $time_table_sub_arr = array();
